@@ -55,8 +55,8 @@ const updateAgenda = async (req, res) =>{
     }
 
     //Se elimina los ultimos caracteres, espacio y coma.
-    sql = `${sql.substring(0, sql.length - 2)};`;
-
+    sql = `${sql.substring(0, sql.length - 2)} WHERE id = :id;`;
+    
     const options = {
       replacements: { ...req.body, id }
     };
