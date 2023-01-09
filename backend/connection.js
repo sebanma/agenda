@@ -1,7 +1,7 @@
 const { Sequelize } = require('sequelize');
 
 const createConnection =  (db = 'agenda') => {
-  const sequelize = new Sequelize(db, 'root', '123456', {
+  const sequelize = new Sequelize(db, 'agenda', '1234', {
     host: 'localhost',
     dialect: 'mysql',
     logging: false
